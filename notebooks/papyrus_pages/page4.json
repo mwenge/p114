@@ -1,0 +1,442 @@
+[
+    {
+        "line": 256,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 451,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 257,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 502,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 258,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 553,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 259,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 604,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 260,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 655,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 261,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 706,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 262,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 757,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 263,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 808,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 264,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 859,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 265,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 910,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 266,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 961,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 267,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 1012,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 268,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 1063,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 269,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 1114,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 270,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 1165,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 271,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 1216,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 272,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 1267,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 273,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 1318,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 274,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 1369,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 275,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 1420,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 276,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 1471,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 277,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 1522,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 278,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 1573,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 279,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 1624,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 280,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 1675,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 281,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 1726,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 282,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 1777,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 283,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 1828,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 284,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 1879,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 285,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 1930,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 286,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 1981,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 287,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 2032,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 288,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 2083,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 289,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 2134,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 290,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 2185,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 291,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 2236,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 292,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 2287,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 293,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 2338,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 294,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 2389,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 295,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 2440,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 296,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 2491,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 297,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 2542,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 298,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 2593,
+            "width": 1450,
+            "height": 60
+        }
+    },
+    {
+        "line": 299,
+        "image": "papyrus_pages/page4_rotated.jpg",
+        "coords": {
+            "x": 180,
+            "y": 2644,
+            "width": 1450,
+            "height": 60
+        }
+    }
+]
