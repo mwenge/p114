@@ -29,7 +29,7 @@ function loadPageToScrollPosition() {
   let allLines = Array.from(document.getElementsByClassName("hexameter-line"));
   allLines.forEach( i => {
     let l = parseInt(i.id.split('-')[2], 10);
-    i.addEventListener("mouseenter", updateHighlightedLine(l));
+    i.addEventListener("mouseenter", highlightLineWhenHovered(l));
   });
 
   var bookmarkedPageFieldName = book + "Page";
@@ -255,25 +255,25 @@ function updateHighlightedLines(line) {
   var img = document.createElement("img");
   img.src = encodeURIComponent(imageToAdd);
   img.id = encodeURIComponent(imageToAdd);
-  img.addEventListener("load", addLinesToImage(line, imageToAdd, img));
+  img.addEventListener("load", addLinesAfterImageHasLoaded(line, imageToAdd, img));
   imagecontainer.innerHTML = "";
   imagecontainer.appendChild(img);
 }
 
-function updateHighlightedLine(l) {
+function highlightLineWhenHovered(l) {
   return function(e) {
     updateHighlightedLines(l);
   }
 }
 
-function imageLineClicked(l) {
+function updateLinesWhenClicked(l) {
   return function(e) {
     updateLineHighlights(l);
     displayTranslation(l.toString());
   }
 }
 
-function addLinesToImage(line, imageToAdd, img) {
+function addLinesAfterImageHasLoaded(line, imageToAdd, img) {
   return function(e) {
     if (!coordinates.has(line)) {
       return;
@@ -290,8 +290,8 @@ function addLinesToImage(line, imageToAdd, img) {
       lineDiv.style.height = ((area.height / img.naturalHeight) * 100) + '%';
       lineDiv.style.top = ((area.y / img.naturalHeight) * 100) + '%';
       lineDiv.style.left = ((area.x / img.naturalWidth) * 100) + '%';
-      lineDiv.addEventListener("mouseenter", updateHighlightedLine(l));
-      lineDiv.addEventListener("click", imageLineClicked(l));
+      lineDiv.addEventListener("mouseenter", highlightLineWhenHovered(l));
+      lineDiv.addEventListener("click", updateLinesWhenClicked(l));
       imagecontainer.appendChild(lineDiv);
     });
     updateLineHighlights(line);
