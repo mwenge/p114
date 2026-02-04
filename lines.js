@@ -7060,7 +7060,7 @@ var lines = [
         }
     },
     {
-        "line": 790,
+        "line": 791,
         "image": "papyrus_pages/page16_rotated.jpg",
         "coords": {
             "x": 160,
@@ -7070,7 +7070,7 @@ var lines = [
         }
     },
     {
-        "line": 791,
+        "line": 792,
         "image": "papyrus_pages/page16_rotated.jpg",
         "coords": {
             "x": 160,
@@ -7080,7 +7080,7 @@ var lines = [
         }
     },
     {
-        "line": 792,
+        "line": 793,
         "image": "papyrus_pages/page16_rotated.jpg",
         "coords": {
             "x": 160,
@@ -7090,7 +7090,7 @@ var lines = [
         }
     },
     {
-        "line": 793,
+        "line": 794,
         "image": "papyrus_pages/page16_rotated.jpg",
         "coords": {
             "x": 160,
@@ -7100,7 +7100,7 @@ var lines = [
         }
     },
     {
-        "line": 794,
+        "line": 795,
         "image": "papyrus_pages/page16_rotated.jpg",
         "coords": {
             "x": 160,
@@ -7110,7 +7110,7 @@ var lines = [
         }
     },
     {
-        "line": 795,
+        "line": 796,
         "image": "papyrus_pages/page16_rotated.jpg",
         "coords": {
             "x": 160,
@@ -7120,7 +7120,7 @@ var lines = [
         }
     },
     {
-        "line": 796,
+        "line": 797,
         "image": "papyrus_pages/page16_rotated.jpg",
         "coords": {
             "x": 160,
@@ -7130,7 +7130,7 @@ var lines = [
         }
     },
     {
-        "line": 797,
+        "line": 798,
         "image": "papyrus_pages/page16_rotated.jpg",
         "coords": {
             "x": 160,
@@ -7140,7 +7140,7 @@ var lines = [
         }
     },
     {
-        "line": 798,
+        "line": 799,
         "image": "papyrus_pages/page16_rotated.jpg",
         "coords": {
             "x": 160,
@@ -7150,7 +7150,7 @@ var lines = [
         }
     },
     {
-        "line": 799,
+        "line": 800,
         "image": "papyrus_pages/page16_rotated.jpg",
         "coords": {
             "x": 160,
@@ -7160,7 +7160,7 @@ var lines = [
         }
     },
     {
-        "line": 800,
+        "line": 801,
         "image": "papyrus_pages/page16_rotated.jpg",
         "coords": {
             "x": 160,
@@ -7170,7 +7170,7 @@ var lines = [
         }
     },
     {
-        "line": 801,
+        "line": 802,
         "image": "papyrus_pages/page16_rotated.jpg",
         "coords": {
             "x": 160,
@@ -7180,7 +7180,7 @@ var lines = [
         }
     },
     {
-        "line": 802,
+        "line": 803,
         "image": "papyrus_pages/page16_rotated.jpg",
         "coords": {
             "x": 160,
@@ -7190,7 +7190,7 @@ var lines = [
         }
     },
     {
-        "line": 803,
+        "line": 804,
         "image": "papyrus_pages/page16_rotated.jpg",
         "coords": {
             "x": 160,
