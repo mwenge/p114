@@ -301,10 +301,11 @@ span {
 }
 
 #papyrus {
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
-  width: 33%;
+  width: 32%;
 }
  
 #uncial > span > span:nth-child(even) {
@@ -330,10 +331,6 @@ span {
   left: 33%;
   font-family: 'P114', serif;
 }
-.imagecontainer {
-  position: fixed;
-  height: 100%;
-}
 .imagecontainer img {
   height: 100%;
   mix-blend-mode: multiply;
@@ -341,6 +338,24 @@ span {
   position: relative;
   pointer-events:none;
 }
+.slide {
+  scroll-snap-align: center;
+}
+#imagecontainer {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 32%;
+  z-index: 11;
+}
+#carousel {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  height: 100%;
+  scrollbar-width: none;
+}
+
 .image-line {
   position: absolute;
   z-index: 0;

@@ -240,6 +240,49 @@ function hideComment() {
   comment.style.display = "none";
 }
 
+let y = 400;
+let imageScrollPositions = new Map(
+  [
+    ["papyrus_pages/page1_rotated.jpg", 400],
+    ["papyrus_pages/page2_rotated.jpg", y+=1800],
+    ["papyrus_pages/page3_rotated.jpg", y+=1800],
+    ["papyrus_pages/page4_rotated.jpg", y+=1800],
+    ["papyrus_pages/page5_rotated.jpg", y+=1800],
+    ["papyrus_pages/page6.jpg", y+=1800],
+    ["papyrus_pages/page7_rotated.jpg", y+=1800],
+    ["papyrus_pages/page8_rotated.jpg", y+=1800],
+    ["papyrus_pages/page9_rotated.jpg", y+=1800],
+    ["papyrus_pages/page10_rotated.jpg", y+=1800],
+    ["papyrus_pages/page11.jpg", y+=1800],
+    ["papyrus_pages/page12.jpg", y+=1800],
+    ["papyrus_pages/page13_rotated.jpg", y+=1800],
+    ["papyrus_pages/page14_rotated.jpg", y+=1800],
+    ["papyrus_pages/page15_rotated.jpg", y+=1800],
+    ["papyrus_pages/page16_rotated.jpg", y+=1800],
+  ]
+);
+
+let imageIDs = new Map(
+  [
+    ["papyrus_pages/page1_rotated.jpg", "page1_image"],
+    ["papyrus_pages/page2_rotated.jpg", "page2_image"],
+    ["papyrus_pages/page3_rotated.jpg", "page3_image"],
+    ["papyrus_pages/page4_rotated.jpg", "page4_image"],
+    ["papyrus_pages/page5_rotated.jpg", "page5_image"],
+    ["papyrus_pages/page6.jpg", "page6_image"],
+    ["papyrus_pages/page7_rotated.jpg", "page7_image"],
+    ["papyrus_pages/page8_rotated.jpg", "page8_image"],
+    ["papyrus_pages/page9_rotated.jpg", "page9_image"],
+    ["papyrus_pages/page10_rotated.jpg", "page10_image"],
+    ["papyrus_pages/page11.jpg", "page11_image"],
+    ["papyrus_pages/page12.jpg", "page12_image"],
+    ["papyrus_pages/page13_rotated.jpg", "page13_image"],
+    ["papyrus_pages/page14_rotated.jpg", "page14_image"],
+    ["papyrus_pages/page15_rotated.jpg", "page15_image"],
+    ["papyrus_pages/page16_rotated.jpg", "page16_image"],
+  ]
+);
+
 let currentImage = null;
 function updateHighlightedLines(line) {
   if (!images.has(line)) {
@@ -255,12 +298,16 @@ function updateHighlightedLines(line) {
   }
   currentImage = imageToAdd;
 
-  var img = document.createElement("img");
-  img.src = encodeURIComponent(imageToAdd);
-  img.id = encodeURIComponent(imageToAdd);
-  img.addEventListener("load", addLinesAfterImageHasLoaded(line, imageToAdd, img));
-  imagecontainer.innerHTML = "";
-  imagecontainer.appendChild(img);
+  carousel.scrollTo({
+      top: 0,
+      left: imageScrollPositions.get(currentImage),
+      behavior: "smooth",
+  });
+
+  let imageID = imageIDs.get(currentImage);
+  let img = document.getElementById(imageID);
+  console.log(img.naturalWidth, img.naturalHeight);
+  addLinesAfterImageHasLoaded(line, imageToAdd, img);
 }
 
 function highlightLineWhenHovered(l) {
@@ -277,28 +324,27 @@ function updateLinesWhenClicked(l) {
 }
 
 function addLinesAfterImageHasLoaded(line, imageToAdd, img) {
-  return function(e) {
-    if (!coordinates.has(line)) {
-      return;
-    }
-
-    // Add all line boxes to the image.
-    let linesInImage = linesForImage.get(imageToAdd);
-    linesInImage.forEach(l => {
-      var area = coordinates.get(l);
-      var lineDiv = document.createElement("div");
-      lineDiv.className = "hexameter-line image-line";
-      lineDiv.id = "image-line-" + l;
-      lineDiv.style.width = ((area.width / img.naturalWidth) * 100) + '%';
-      lineDiv.style.height = ((area.height / img.naturalHeight) * 100) + '%';
-      lineDiv.style.top = ((area.y / img.naturalHeight) * 100) + '%';
-      lineDiv.style.left = ((area.x / img.naturalWidth) * 100) + '%';
-      lineDiv.addEventListener("mouseenter", highlightLineWhenHovered(l));
-      lineDiv.addEventListener("click", updateLinesWhenClicked(l));
-      imagecontainer.appendChild(lineDiv);
-    });
-    updateLineHighlights(line);
+  if (!coordinates.has(line)) {
+    return;
   }
+  imagecontainer.innerHTML = ""
+
+  // Add all line boxes to the image.
+  let linesInImage = linesForImage.get(imageToAdd);
+  linesInImage.forEach(l => {
+    var area = coordinates.get(l);
+    var lineDiv = document.createElement("div");
+    lineDiv.className = "hexameter-line image-line";
+    lineDiv.id = "image-line-" + l;
+    lineDiv.style.width = ((area.width / img.naturalWidth) * 100) + '%';
+    lineDiv.style.height = ((area.height / img.naturalHeight) * 100) + '%';
+    lineDiv.style.top = ((area.y / img.naturalHeight) * 100) + '%';
+    lineDiv.style.left = ((area.x / img.naturalWidth) * 100) + '%';
+    lineDiv.addEventListener("mouseenter", highlightLineWhenHovered(l));
+    lineDiv.addEventListener("click", updateLinesWhenClicked(l));
+    imagecontainer.appendChild(lineDiv);
+  });
+  updateLineHighlights(line);
 }
 
 window.onload = loadPageToScrollPosition;
