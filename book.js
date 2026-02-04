@@ -212,6 +212,9 @@ function displayTranslation(line) {
   parallel_translation.style.display = "block";
   return true;
 }
+function hideTips() {
+  tips.style.display = "none";
+}
 
 function hideTranslation() {
   let allLines = Array.from(document.getElementsByClassName("hexameter-line"));
