@@ -28,7 +28,7 @@ function loadPageToScrollPosition() {
 
   let allLines = Array.from(document.getElementsByClassName("hexameter-line"));
   allLines.forEach( i => {
-    let l = parseInt(i.id.split('-')[2], 10);
+    let l = parseInt(i.id.split('-').slice(-1)[0], 10);
     i.addEventListener("mouseenter", highlightLineWhenHovered(l));
   });
 
