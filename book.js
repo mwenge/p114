@@ -240,25 +240,24 @@ function hideComment() {
   comment.style.display = "none";
 }
 
-let y = 400;
 let imageScrollPositions = new Map(
   [
-    ["papyrus_pages/page1_rotated.jpg", 400],
-    ["papyrus_pages/page2_rotated.jpg", y+=1800],
-    ["papyrus_pages/page3_rotated.jpg", y+=1800],
-    ["papyrus_pages/page4_rotated.jpg", y+=1800],
-    ["papyrus_pages/page5_rotated.jpg", y+=1800],
-    ["papyrus_pages/page6.jpg", y+=1800],
-    ["papyrus_pages/page7_rotated.jpg", y+=1800],
-    ["papyrus_pages/page8_rotated.jpg", y+=1800],
-    ["papyrus_pages/page9_rotated.jpg", y+=1800],
-    ["papyrus_pages/page10_rotated.jpg", y+=1800],
-    ["papyrus_pages/page11.jpg", y+=1800],
-    ["papyrus_pages/page12.jpg", y+=1800],
-    ["papyrus_pages/page13_rotated.jpg", y+=1800],
-    ["papyrus_pages/page14_rotated.jpg", y+=1800],
-    ["papyrus_pages/page15_rotated.jpg", y+=1800],
-    ["papyrus_pages/page16_rotated.jpg", y+=1800],
+    ["papyrus_pages/page1_rotated.jpg", 1],
+    ["papyrus_pages/page2_rotated.jpg", 2],
+    ["papyrus_pages/page3_rotated.jpg", 3],
+    ["papyrus_pages/page4_rotated.jpg", 4],
+    ["papyrus_pages/page5_rotated.jpg", 5],
+    ["papyrus_pages/page6.jpg", 6],
+    ["papyrus_pages/page7_rotated.jpg", 7],
+    ["papyrus_pages/page8_rotated.jpg", 8],
+    ["papyrus_pages/page9_rotated.jpg", 9],
+    ["papyrus_pages/page10_rotated.jpg", 10],
+    ["papyrus_pages/page11.jpg", 11],
+    ["papyrus_pages/page12.jpg", 12],
+    ["papyrus_pages/page13_rotated.jpg", 13],
+    ["papyrus_pages/page14_rotated.jpg", 14],
+    ["papyrus_pages/page15_rotated.jpg", 15],
+    ["papyrus_pages/page16_rotated.jpg", 16],
   ]
 );
 
@@ -305,9 +304,12 @@ function updateHighlightedLines(line) {
 
   currentImage = imageToAdd;
 
+  let carouselWidth = carousel.clientWidth;
+  let offsetFactor = imageScrollPositions.get(currentImage);
+  let scrollPosition  = (carouselWidth * (offsetFactor - 1)) + (carouselWidth / 3);
   carousel.scrollTo({
       top: 0,
-      left: imageScrollPositions.get(currentImage),
+      left: scrollPosition,
       behavior: "smooth",
   });
 
