@@ -296,6 +296,13 @@ function updateHighlightedLines(line) {
     updateLineHighlights(line);
     return;
   }
+
+  let imageID = imageIDs.get(imageToAdd);
+  let img = document.getElementById(imageID);
+  if (!img || img.naturalWidth == 0) {
+    return;
+  }
+
   currentImage = imageToAdd;
 
   carousel.scrollTo({
@@ -304,8 +311,6 @@ function updateHighlightedLines(line) {
       behavior: "smooth",
   });
 
-  let imageID = imageIDs.get(currentImage);
-  let img = document.getElementById(imageID);
   console.log(img.naturalWidth, img.naturalHeight);
   addLinesAfterImageHasLoaded(line, imageToAdd, img);
 }
