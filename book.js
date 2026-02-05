@@ -240,27 +240,6 @@ function hideComment() {
   comment.style.display = "none";
 }
 
-let imageScrollPositions = new Map(
-  [
-    ["papyrus_pages/page1_rotated.jpg", 1],
-    ["papyrus_pages/page2_rotated.jpg", 2],
-    ["papyrus_pages/page3_rotated.jpg", 3],
-    ["papyrus_pages/page4_rotated.jpg", 4],
-    ["papyrus_pages/page5_rotated.jpg", 5],
-    ["papyrus_pages/page6.jpg", 6],
-    ["papyrus_pages/page7_rotated.jpg", 7],
-    ["papyrus_pages/page8_rotated.jpg", 8],
-    ["papyrus_pages/page9_rotated.jpg", 9],
-    ["papyrus_pages/page10_rotated.jpg", 10],
-    ["papyrus_pages/page11.jpg", 11],
-    ["papyrus_pages/page12.jpg", 12],
-    ["papyrus_pages/page13_rotated.jpg", 13],
-    ["papyrus_pages/page14_rotated.jpg", 14],
-    ["papyrus_pages/page15_rotated.jpg", 15],
-    ["papyrus_pages/page16_rotated.jpg", 16],
-  ]
-);
-
 let imageIDs = new Map(
   [
     ["papyrus_pages/page1_rotated.jpg", "page1_image"],
@@ -296,6 +275,7 @@ function updateHighlightedLines(line) {
     return;
   }
 
+  // Has the image loaded?
   let imageID = imageIDs.get(imageToAdd);
   let img = document.getElementById(imageID);
   if (!img || img.naturalWidth == 0) {
