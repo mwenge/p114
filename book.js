@@ -304,16 +304,10 @@ function updateHighlightedLines(line) {
 
   currentImage = imageToAdd;
 
-  let carouselWidth = carousel.clientWidth;
-  let offsetFactor = imageScrollPositions.get(currentImage);
-  let scrollPosition  = (carouselWidth * (offsetFactor - 1)) + (carouselWidth / 3);
-  carousel.scrollTo({
-      top: 0,
-      left: scrollPosition,
+  img.scrollIntoView({
       behavior: "smooth",
   });
 
-  console.log(img.naturalWidth, img.naturalHeight);
   addLinesAfterImageHasLoaded(line, imageToAdd, img);
 }
 
