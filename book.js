@@ -120,15 +120,24 @@ function displayPayprusLine(lineNumber) {
   }
   ctx.drawImage(img, area.x, area.y, area.width, area.height, 0, 0, canvas.width, canvas.height);
 
-  let lineAbove = document.getElementById("uncial-line-" + (lineNumber - 1));
-  let currentLine = document.getElementById("uncial-line-" + lineNumber);
-  lineTipLine = currentLine.cloneNode(true);
-  lineTipLine.className = "tip-line";
-  lineTipLine.id = "";
   linetipimage.innerHTML = "";
   linetipimage.appendChild(canvas);
-  linetipline.innerHTML = "";
-  linetipline.appendChild(lineTipLine);
+
+  let uncialLine = document.getElementById("uncial-line-" + lineNumber);
+  let lineTipLine = uncialLine.cloneNode(true);
+  lineTipLine.className = "uncial-tip-line";
+  lineTipLine.id = "";
+  uncialtipline.innerHTML = "";
+  uncialtipline.appendChild(lineTipLine);
+
+  let minorLine = document.getElementById("line-" + lineNumber);
+  lineTipLine = minorLine.cloneNode(true);
+  lineTipLine.className = "minor-tip-line";
+  lineTipLine.id = "";
+
+  minortipline.innerHTML = "";
+  minortipline.appendChild(lineTipLine);
+
   linetip.style.display = "block";
 
   /*

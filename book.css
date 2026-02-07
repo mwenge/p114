@@ -413,22 +413,37 @@ span {
   overflow-y: scroll;
   background-color: #e8dedc;
   border-top: 1px black solid;
-  font-family: "P114", serif;
 }
 .line-tip .line-number {
   display: none;
 }
-.tip-line {
+.uncial-tip-line {
   font-size: 1vw;
   line-height: 12px;
   text-transform: uppercase;
+  font-family: "P114", serif;
 }
-.tip-line span {
+.uncial-tip-line span {
   font-style: normal
+}
+.uncial-tip-line > span:nth-child(even) {
+  font-weight: bold;
+  color: gray;
+}
+.minor-tip-line span {
+  font-style: italic;
+  font-family: "GFS Didot", serif;
+}
+.minor-tip-line {
+  font-size: 1.2vw;
+  line-height: 12px;
 }
 #linetipimage {
   width: 100%;
 }
 .line-canvas, #linetipline {
-  max-width: 100%;
+  max-width: 99%;
+}
+.line-canvas {
+  border: 1px black solid;
 }
