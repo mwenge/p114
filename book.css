@@ -357,6 +357,10 @@ span {
   scroll-behaviour: smooth;
 }
 
+.faded {
+  color: grey;
+}
+
 .image-line {
   position: absolute;
   z-index: 0;
@@ -394,4 +398,37 @@ span {
 }
 #tips {
   max-height: none;
+}
+.line-tip{
+  position:fixed;
+  padding-left: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 250;
+  bottom: 0;
+  left: 1px;
+  right: 1px;
+  width: 32%;
+  max-height: 20%;
+  overflow-y: scroll;
+  background-color: #e8dedc;
+  border-top: 1px black solid;
+  font-family: "P114", serif;
+}
+.line-tip .line-number {
+  display: none;
+}
+.tip-line {
+  font-size: 1vw;
+  line-height: 12px;
+  text-transform: uppercase;
+}
+.tip-line span {
+  font-style: normal
+}
+#linetipimage {
+  width: 100%;
+}
+.line-canvas, #linetipline {
+  max-width: 100%;
 }

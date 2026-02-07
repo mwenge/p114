@@ -84,6 +84,7 @@ function showNextOnHelper(evt) {
   }
 }
 
+
 function updateLineHighlights(newLine) {
   let allLines = Array.from(document.getElementsByClassName("hexameter-line"));
   allLines.forEach( i => {
@@ -100,6 +101,42 @@ function updateLineHighlights(newLine) {
       newImageLine.classList.add("line-highlight");
     }
   }
+  displayPayprusLine(newLine);
+}
+
+function displayPayprusLine(lineNumber) {
+  // Update the line tip display.
+  let area = coordinates.get(lineNumber);
+  var canvas = document.createElement('canvas');
+  canvas.className = "line-canvas";
+  canvas.height = 33;
+  canvas.width = 33 * (area.width / area.height);
+  var ctx = canvas.getContext('2d', {alpha: false});
+  let imageID = imageIDs.get(currentImage);
+  let img = document.getElementById(imageID);
+  console.log(currentImage, img);
+  if (!img) {
+    return;
+  }
+  ctx.drawImage(img, area.x, area.y, area.width, area.height, 0, 0, canvas.width, canvas.height);
+
+  let lineAbove = document.getElementById("uncial-line-" + (lineNumber - 1));
+  let currentLine = document.getElementById("uncial-line-" + lineNumber);
+  lineTipLine = currentLine.cloneNode(true);
+  lineTipLine.className = "tip-line";
+  lineTipLine.id = "";
+  linetipimage.innerHTML = "";
+  linetipimage.appendChild(canvas);
+  linetipline.innerHTML = "";
+  linetipline.appendChild(lineTipLine);
+  linetip.style.display = "block";
+
+  /*
+  let rect = lineAbove.getBoundingClientRect();
+  console.log(lineNumber, rect);
+  linetip.style.top = (rect.y - 5) + "px";
+  linetip.style.left = rect.x + "px";
+  */
 }
 
 function updateHelper(evt, lineNumber, translationsForWord) {
@@ -238,6 +275,10 @@ function displayComment(line) {
 
 function hideComment() {
   comment.style.display = "none";
+}
+
+function hideTip() {
+  linetip.style.display = "none";
 }
 
 let imageIDs = new Map(
